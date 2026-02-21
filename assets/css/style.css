@@ -3,25 +3,25 @@
    Aesthetic: Industrial Precision · Dark Luxury · Engineered
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 /* ─── CSS VARIABLES ─────────────────────────────────────── */
 :root {
-  --bg:        #0a0a0b;
-  --surface:   #111113;
-  --surface2:  #1a1a1d;
-  --border:    rgba(255,255,255,0.07);
-  --text:      #e8e8ea;
-  --muted:     #6b6b72;
-  --accent:    #1d3f72;
-  --accent-lo: rgba(29,63,114,0.10); 
-  --accent-hi: #2a5ea8;
-  --gold:      #b08d57;
+  --bg:        #ffffff;
+  --surface:   #f8f9fa;
+  --surface2:  #f1f3f5;
+  --border:    rgba(0,0,0,0.08);
+  --text:      #212529;
+  --muted:     #6c757d;
+  --accent:    #2b8c3e;
+  --accent-lo: rgba(43,140,62,0.08);
+  --accent-hi: #2b8c3e;
+  --gold:      #fbbf24;
   --white:     #ffffff;
-  --gold:      #c8a96e;
+  --yellow:    #fbbf24;
 
-  --font-display: 'Syne', sans-serif;
-  --font-body:    'DM Sans', sans-serif;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body:    'Inter', sans-serif;
 
   --r-sm: 8px;
   --r-md: 16px;
@@ -88,7 +88,7 @@ body.loaded { opacity: 1; }
   -webkit-backdrop-filter: blur(0px);
 }
 .site-header.scrolled::before {
-  background: rgba(10,10,11,0.9);
+  background: rgba(255,255,255,0.95);
   border-bottom-color: var(--border);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -105,7 +105,7 @@ body.loaded { opacity: 1; }
   font-size: 1.4rem;
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--white);
+  color: var(--text);
   display: flex;
   align-items: center;
   gap: 2px;
@@ -133,7 +133,7 @@ body.loaded { opacity: 1; }
   font-family: var(--font-body);
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--muted);
+  color: #4a5568;
   padding: 8px 14px;
   border-radius: 999px;
   transition: color 0.2s, background 0.2s;
@@ -141,7 +141,7 @@ body.loaded { opacity: 1; }
 }
 .main-nav a:hover,
 .main-nav a.active {
-  color: var(--white);
+  color: var(--accent-hi);
   background: var(--surface2);
 }
 .main-nav .nav-cta {
@@ -335,7 +335,7 @@ body.loaded { opacity: 1; }
   font-weight: 800;
   line-height: 1.0;
   letter-spacing: -0.03em;
-  color: var(--white);
+  color: var(--text);
   margin-bottom: 24px;
 }
 .hero-title .line { display: block; overflow: hidden; }
@@ -416,7 +416,7 @@ body.loaded { opacity: 1; }
   font-family: var(--font-display);
   font-size: 3rem;
   font-weight: 800;
-  color: var(--white);
+  color: var(--text);
   line-height: 1;
   display: flex;
   align-items: baseline;
@@ -550,11 +550,11 @@ body.loaded { opacity: 1; }
 .btn-primary {
   background: var(--accent);
   color: white;
-  box-shadow: 0 0 0 0 rgba(37,99,255,0.4);
+  box-shadow: 0 0 0 0 rgba(43,140,62,0.4);
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(37,99,255,0.4);
+  box-shadow: 0 8px 30px rgba(43,140,62,0.4);
 }
 .btn-outline {
   background: transparent;
@@ -807,10 +807,13 @@ body.loaded { opacity: 1; }
   font-family: var(--font-display);
   font-size: 4rem;
   font-weight: 800;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--accent-lo);
+  color: var(--yellow);
   line-height: 1;
   margin-bottom: 20px;
+  text-shadow: 0 2px 8px rgba(251,191,36,0.2);
+  color: var(--yellow);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 .process-step-title {
   font-family: var(--font-display);
@@ -1511,6 +1514,271 @@ body.loaded { opacity: 1; }
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+/* Fix text visibility on light background */
+.hero-title,
+.section-title,
+.process-step-title,
+.service-tile-name,
+.project-card-name,
+.product-row-name,
+.counter-val,
+.spec-cell-val,
+.contact-card-val,
+.form-title,
+.page-title,
+.cta-band-title,
+.footer-nav-title {
+  color: var(--text) !important;
+}
+
+/* Make muted text slightly darker for better contrast */
+.section-lead,
+.hero-desc,
+.process-step-desc,
+.service-tile-desc,
+.project-card-loc,
+.product-row-tag,
+.cta-band-sub,
+.footer-desc {
+  color: #4a5568 !important; /* darker than --muted for better visibility */
+}
+
+/* Fix service tile numbers and arrows */
+.service-tile-num,
+.service-tile-arrow {
+  color: var(--accent-hi) !important;
+  opacity: 1 !important;
+}
+
+/* Fix counter labels */
+.counter-lbl {
+  color: #4a5568 !important;
+}
+
+/* Fix contact card text */
+.contact-card-label {
+  color: #718096 !important;
+}
+.contact-card-val {
+  color: var(--text) !important;
+}
+
+/* Fix spec table text */
+.spec-table td:first-child {
+  color: #4a5568 !important;
+}
+.spec-table td:last-child {
+  color: var(--text) !important;
+}
+
+/* Fix feature list items */
+.feature-list li {
+  color: var(--text) !important;
+}
+
+/* Fix product overview text */
+.product-overview {
+  color: #4a5568 !important;
+}
+
+/* Fix page subtitle */
+.page-subtitle {
+  color: #4a5568 !important;
+}
+
+/* Fix hero eyebrow */
+.hero-eyebrow {
+  color: var(--accent-hi) !important;
+  background: rgba(43,140,62,0.1) !important;
+  border-color: rgba(43,140,62,0.2) !important;
+}
+
+/* Fix year pill */
+.year-pill {
+  color: var(--accent-hi) !important;
+  background: var(--surface) !important;
+}
+
+/* Fix dropdown menu text */
+.dropdown a {
+  color: var(--text) !important;
+}
+.dropdown a:hover {
+  color: var(--accent-hi) !important;
+}
+
+/* Fix mobile nav text */
+.mobile-nav a {
+  color: var(--text) !important;
+}
+.mobile-nav .sub-item a {
+  color: #4a5568 !important;
+}
+
+/* Fix footer links */
+.footer-nav-list a {
+  color: #4a5568 !important;
+}
+.footer-nav-list a:hover {
+  color: var(--accent-hi) !important;
+}
+
+/* Fix footer contact mini */
+.footer-contact-mini a {
+  color: #4a5568 !important;
+}
+.footer-contact-mini a:hover {
+  color: var(--accent-hi) !important;
+}
+
+/* Fix form labels */
+.form-label {
+  color: #4a5568 !important;
+}
+
+/* Fix form input text */
+.form-input, .form-select, .form-textarea {
+  color: var(--text) !important;
+  background: white !important;
+}
+
+/* Fix product chips */
+.app-chip {
+  color: #4a5568 !important;
+  background: var(--surface) !important;
+}
+.app-chip:hover {
+  color: var(--accent-hi) !important;
+  border-color: var(--accent-hi) !important;
+}
+
+/* Fix process connector */
+.process-connector {
+  color: var(--accent-hi) !important;
+  background: white !important;
+}
+
+/* Fix scroll indicator */
+.scroll-indicator span {
+  color: #4a5568 !important;
+}
+
+/* Professional font adjustments */
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6,
+.hero-title,
+.section-title,
+.page-title,
+.process-step-title,
+.service-tile-name,
+.project-card-name,
+.product-row-name,
+.counter-val {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.hero-title {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Improve text spacing */
+.section-lead,
+.hero-desc,
+.process-step-desc,
+.service-tile-desc,
+.project-card-loc,
+.product-overview {
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+}
+
+/* Make navigation more professional */
+.main-nav a {
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-size: 0.9rem;
+}
+
+/* Improve button text */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Footer improvements */
+.footer-nav-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+/* Add to style.css */
+.counter-val .suf {
+  color: var(--yellow);
+  font-weight: 600;
+}
+
+/* Logo with image */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 32px;
+  }
+  
+  .logo-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .logo-text .logo-sub {
+    display: none; /* Hide "Engineering" text on very small screens */
+  }
 }
 
 /* ══════════════════════════════════════════════════════════
