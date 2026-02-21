@@ -1781,6 +1781,510 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
+/* ============================================================
+   TEXT VISIBILITY FIXES FOR LIGHT BACKGROUND
+   ============================================================ */
+
+/* Fix all product page titles and headings */
+.page-title,
+.product-detail-grid h2,
+.product-detail-grid h3,
+.section-title,
+.process-step-title,
+.service-tile-name,
+.project-card-name,
+.product-row-name,
+.counter-val,
+.spec-cell-val,
+.contact-card-val,
+.form-title,
+.cta-band-title,
+.footer-nav-title {
+  color: var(--text) !important;
+}
+
+/* Fix all descriptive text */
+.product-overview,
+.process-step-desc,
+.service-tile-desc,
+.project-card-loc,
+.product-row-tag,
+.section-lead,
+.hero-desc,
+.cta-band-sub,
+.footer-desc,
+.page-subtitle,
+.feature-list li,
+.app-chip,
+.product-cta p,
+.spec-table td,
+.contact-card-val,
+.form-label {
+  color: #4a5568 !important; /* Dark gray for better contrast */
+}
+
+/* Fix spec table headers */
+.spec-table-head {
+  color: var(--text) !important;
+  font-weight: 700;
+}
+
+/* Fix spec table first column */
+.spec-table td:first-child {
+  color: #4a5568 !important;
+}
+
+.spec-table td:last-child {
+  color: var(--text) !important;
+  font-weight: 600;
+}
+
+/* Fix feature list bullets */
+.feature-list li {
+  color: #4a5568 !important;
+}
+
+.feature-list li::before {
+  filter: brightness(0.5); /* Darker checkmark */
+}
+
+/* Fix CTA band text */
+.cta-band-title {
+  color: var(--text) !important;
+}
+
+.cta-band-sub {
+  color: #4a5568 !important;
+}
+
+/* Fix product CTA boxes */
+.product-cta {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.product-cta h3 {
+  color: var(--text) !important;
+}
+
+.product-cta p {
+  color: #4a5568 !important;
+}
+
+/* Fix application chips */
+.app-chip {
+  color: #4a5568 !important;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.app-chip:hover {
+  color: var(--accent-hi) !important;
+  border-color: var(--accent-hi);
+}
+
+/* Fix process step numbers */
+.process-step-num {
+  color: var(--yellow) !important;
+  opacity: 1 !important;
+}
+
+/* Fix service tile numbers */
+.service-tile-num {
+  color: var(--accent-hi) !important;
+  opacity: 1 !important;
+}
+
+/* Fix service tile arrows */
+.service-tile-arrow {
+  color: var(--accent-hi) !important;
+  opacity: 1 !important;
+}
+
+/* Fix product row arrows */
+.product-row-arrow {
+  color: var(--accent-hi) !important;
+}
+
+/* Fix contact card icons */
+.contact-card-icon {
+  background: var(--surface2);
+}
+
+/* Fix form input text */
+.form-input,
+.form-select,
+.form-textarea {
+  color: var(--text) !important;
+  background: white !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.form-input::placeholder,
+.form-select::placeholder,
+.form-textarea::placeholder {
+  color: #a0aec0 !important;
+}
+
+/* Fix form submit button */
+.form-submit {
+  background: var(--accent);
+  color: white !important;
+}
+
+.form-submit:hover {
+  background: var(--accent-hi);
+}
+
+/* Fix footer links */
+.footer-nav-list a {
+  color: #4a5568 !important;
+}
+
+.footer-nav-list a:hover {
+  color: var(--accent-hi) !important;
+}
+
+/* Fix footer contact links */
+.footer-contact-mini a {
+  color: #4a5568 !important;
+}
+
+.footer-contact-mini a:hover {
+  color: var(--accent-hi) !important;
+}
+
+/* Fix footer bottom text */
+.footer-bottom {
+  color: #718096 !important;
+}
+
+.footer-bottom-links a {
+  color: #718096 !important;
+}
+
+.footer-bottom-links a:hover {
+  color: var(--accent-hi) !important;
+}
+
+/* Fix intro tags on homepage */
+.intro-tag-text strong {
+  color: var(--text) !important;
+}
+
+.intro-tag-text span {
+  color: #4a5568 !important;
+}
+
+/* Fix year pill */
+.year-pill {
+  color: var(--accent-hi) !important;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+/* Fix counter labels */
+.counter-lbl {
+  color: #4a5568 !important;
+}
+
+/* Fix hero tags */
+.hero-tag {
+  color: #4a5568 !important;
+  border-color: var(--border);
+}
+
+/* Fix mobile nav */
+.mobile-nav a {
+  color: var(--text) !important;
+}
+
+.mobile-nav .sub-item a {
+  color: #4a5568 !important;
+}
+
+/* Fix dropdown menu */
+.dropdown a {
+  color: #4a5568 !important;
+}
+
+.dropdown a:hover {
+  color: var(--accent-hi) !important;
+  background: var(--surface);
+}
+
+/* Fix spec table in product pages */
+.spec-table tr {
+  border-bottom-color: var(--border);
+}
+
+.spec-table tr:hover td {
+  background: var(--surface);
+}
+
+/* Fix product overview text */
+.product-overview {
+  color: #4a5568 !important;
+  line-height: 1.8;
+}
+
+/* Fix feature list in product pages */
+.feature-list li {
+  color: #4a5568 !important;
+}
+
+/* Fix page subtitle */
+.page-subtitle {
+  color: #4a5568 !important;
+}
+
+/* Fix section lead text */
+.section-lead {
+  color: #4a5568 !important;
+}
+
+/* Fix hero description */
+.hero-desc {
+  color: #4a5568 !important;
+}
+
+/* Fix stats card text */
+.stat-label {
+  color: #4a5568 !important;
+}
+
+.stat-num {
+  color: var(--text) !important;
+}
+
+.stat-num .plus {
+  color: var(--accent-hi) !important;
+}
+
+/* Fix process connector */
+.process-connector {
+  color: var(--accent-hi) !important;
+  background: white;
+  border: 1px solid var(--border);
+}
+
+/* Fix marquee text */
+.marquee-item {
+  color: #4a5568 !important;
+}
+
+.marquee-item .sep {
+  color: var(--accent-hi) !important;
+}
+
+/* Fix all button text */
+.btn {
+  color: white !important;
+}
+
+.btn-outline {
+  color: var(--text) !important;
+  border-color: var(--border);
+}
+
+.btn-outline:hover {
+  color: var(--accent-hi) !important;
+  border-color: var(--accent-hi);
+}
+
+/* Fix active nav link */
+.main-nav a.active {
+  color: var(--accent-hi) !important;
+  background: var(--surface);
+}
+
+/* Fix page hero eyebrow */
+.page-hero-eyebrow,
+.page-hero-eyebrow a {
+  color: #4a5568 !important;
+}
+
+.page-hero-eyebrow a:hover {
+  color: var(--accent-hi) !important;
+}
+
+.page-hero-eyebrow .sep {
+  color: var(--border) !important;
+}
+
+/* Fix all specific texts mentioned */
+
+/* 25,000 sq ft Factory - on homepage */
+.intro-tag:nth-child(1) .intro-tag-text strong {
+  color: var(--text) !important;
+}
+
+/* International Reach - on homepage */
+.intro-tag:nth-child(2) .intro-tag-text strong {
+  color: var(--text) !important;
+}
+
+/* Turnkey Capability - on homepage */
+.intro-tag:nth-child(3) .intro-tag-text strong {
+  color: var(--text) !important;
+}
+
+/* Quality Assured - on homepage */
+.intro-tag:nth-child(4) .intro-tag-text strong {
+  color: var(--text) !important;
+}
+
+/* Paint Shop Systems page - "50+" text */
+[class*="paint-shop"] .stat-num,
+[class*="paint-shop"] .stat-num span {
+  color: var(--text) !important;
+}
+
+/* Configure your paint booth - CTA text */
+.product-cta h3,
+.cta-band-title {
+  color: var(--text) !important;
+}
+
+/* Need a flexible paint booth? */
+.cta-band-title,
+.product-cta h3 {
+  color: var(--text) !important;
+}
+
+/* Request oven specification */
+.product-cta h3 {
+  color: var(--text) !important;
+}
+
+/* Integrate with your line */
+.cta-band-title {
+  color: var(--text) !important;
+}
+
+/* Optimize your pretreatment */
+.product-cta h3 {
+  color: var(--text) !important;
+}
+
+/* Engineer your CED line */
+.product-cta h3 {
+  color: var(--text) !important;
+}
+
+/* Design your powder coating line */
+.product-cta h3 {
+  color: var(--text) !important;
+}
+
+/* Select your configuration */
+.product-cta h3 {
+  color: var(--text) !important;
+}
+
+/* Clean your parts effectively */
+.product-cta h3 {
+  color: var(--text) !important;
+}
+
+/* Maximize your floor space */
+.product-cta h3 {
+  color: var(--text) !important;
+}
+
+/* Upgrade your CED line */
+.product-cta h3 {
+  color: var(--text) !important;
+}
+
+/* Design your piping network */
+.product-cta h3 {
+  color: var(--text) !important;
+}
+
+/* Fix all product page titles */
+[class*="page-hero"] h1,
+[class*="page-hero"] .page-title {
+  color: var(--text) !important;
+}
+
+[class*="page-hero"] .accent {
+  color: var(--accent-hi) !important;
+}
+
+/* Fix all section titles */
+h2.section-title {
+  color: var(--text) !important;
+}
+
+h2.section-title .accent {
+  color: var(--accent-hi) !important;
+}
+
+/* Fix Paint Shop Systems page "50+" text */
+body[class*="paint-shop"] .stat-num,
+body[class*="paint-shop"] .stat-num span,
+.page-hero + .section .stat-num,
+.page-hero + .section .stat-num span,
+.section:has(.stat-num) .stat-num,
+.section:has(.stat-num) .stat-num span {
+  color: var(--text) !important;
+  font-weight: 800;
+}
+
+/* Fix the plus sign in "50+" */
+body[class*="paint-shop"] .stat-num .plus,
+body[class*="paint-shop"] .stat-num span:last-child,
+.page-hero + .section .stat-num .plus,
+.page-hero + .section .stat-num span:last-child {
+  color: var(--accent-hi) !important;
+}
+
+/* More specific selector for the paint shop stats */
+[class*="paint-shop"] .counter-cell .counter-val,
+[class*="paint-shop"] .counter-cell .counter-val span,
+[class*="paint-shop"] .counter-cell .counter-val .counter {
+  color: var(--text) !important;
+}
+
+[class*="paint-shop"] .counter-cell .counter-val .suf {
+  color: var(--accent-hi) !important;
+}
+
+/* Fix any white text in the paint shop page */
+[class*="paint-shop"] .stat-block .stat-num,
+[class*="paint-shop"] .stat-block .stat-num span {
+  color: var(--text) !important;
+}
+
+[class*="paint-shop"] .stat-block .stat-num .plus {
+  color: var(--accent-hi) !important;
+}
+
+/* Very specific fix for the exact element */
+div:has(> .stat-num) .stat-num,
+.stat-num {
+  color: var(--text) !important;
+}
+
+.stat-num .plus,
+.stat-num .suf {
+  color: var(--accent-hi) !important;
+}
+
+/* Force all stat numbers to be dark */
+.counter-val,
+.counter-val .counter,
+.stat-num,
+.stat-num span {
+  color: var(--text) !important;
+}
+
+.counter-val .suf,
+.stat-num .plus {
+  color: var(--accent-hi) !important;
+}
+
 /* ══════════════════════════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════════════════════════ */
